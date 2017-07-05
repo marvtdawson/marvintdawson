@@ -1,0 +1,24 @@
+{% extends "template/layout/basetemplate.phtml" %}
+{% block maincontent %}
+<div class="corepage-wall">
+    <img src="../assets/images/rmu_education1.jpg" class="corepage_wall_image">
+</div>
+<div class="main-content">
+    <div class="corepage-title">{{ pageTitle }}</div>
+    <h4 class="para-font-color">HIGH SHCOOL</h4><hr/>
+    <span> I attended {{ highSchoolContent }} Chicago Vocational High School (CVS), from 1986 - 1990. </span>
+    <p>While there I studied cast metals as a vocational skill.  I thought it was something cool.</p>
+    <p>In 1989, I took first place as the best Cast Metals project presented, in the city of Chicago.  Probably one of the most memorable days in my life riding the Chicago bus with my mom while carrying a trophy that was almost as tall as me at the time.
+        I enjoyed the attention I was getting from just regular strangers, and I love the sense of pride it gave my mother.  The look on her face said she was proud of me.
+    </p>
+    <p> {{ highschoolGraduateStatus }} I graduated in 1990, with my high school diploma.</p>
+    <h4 class="para-font-color">COLLEGES</h4><hr/>
+    <p>My first college experience was with Olive Harvey Community College where I took all of my pre requisites for Nursing.  Due to the long waiting list I soon grew tired of waiting and moved on.</p>
+    <p> In 2000 I registered and started to attend {{ collegeContent }} Robert Morris University.</p>
+    <p> {{ collegeGraduateStatus }} I graduated in 2002, with a Bachelors Degree in Business Management. Due to the fact that I had taken most of my liberal classes and they transferred in I was able to start and finish in 2 years.</p>
+    <h4 class="para-font-color">CREDITIAL</h4><hr/>
+    <p> {{ certificationContent }} </p>
+    <p> I have plans to receive my {{ certificationStatus }} PHP7 Software Engineer certification in 2017.</p>
+    <p> My certification exam is paid for and all I have to do is pick a date.  Right now I am just studying as much as possible while learning new tech.</p>
+</div >
+{% endblock %}

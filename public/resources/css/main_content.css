@@ -1,0 +1,496 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	margin: 0;
+}
+/*--------- START PAGE WRAPPER ------- */
+.main-page-wrapper {
+	width: 100%;
+	margin-top: 0;
+}
+.para-font-color{
+	color: #000;
+}
+.errMsg {
+	color: #F80206;
+}
+/*-- ========================================== Media Query Min Width @ 1920 PX ==================================== */
+
+	.main-content-wrapper {
+		width: 100%;
+		margin: 53px auto 10px;
+		min-height: 505px;
+	}
+	.main-content{
+		width: 55%;
+		margin: 15px auto 100px;
+	}
+	.main-page-title-div {
+		float: none;
+		left: 5px;
+	}
+	/*-- START LOGIN BUTTONS --*/
+	.login-buttons-wrapper {
+		width: 520px;
+		height: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		z-index: 100;
+	}
+	.login-buttons-row1, .login-buttons-row2 {
+		width: 99%;
+		height: 150px;
+		position: relative;
+		color: #fff;
+		float: left;
+		top: 40px;
+	}
+	#login-buttons-style {
+		width: 175px;
+		float: left;
+		height: 45px;
+		border-radius: 25px;
+		position: relative;
+		margin-left: 55px;
+		margin-top: 30px;
+		text-align: center;
+		box-shadow: 3px 3px 3px #686666;
+	}
+	#login-buttons-style:hover {
+		box-shadow: 3px 3px 3px #FFFFFF;
+	}
+	.login-buttons-style-text {
+		position: relative;
+		top: 15px;
+		color: #fff;
+		font-size: 15px;
+		font-family: Copper Black sans-serif;
+	}
+	.login-buttons-style-text a, .login-buttons-style-text a:hover,
+		.login-buttons-style-text a:active, .login-buttons-style-text a:visited,
+		.login-buttons-style-text a:link {
+		text-decoration: none;
+		color: #fff;
+		padding: 12px 5px;
+	}
+	.login-button1 {
+		background-color: red;
+	}
+	.login-button2 {
+		background-color: blue;
+	}
+	.login-button3 {
+		background-color: green;
+	}
+	.login-button4 {
+		background-color: orange;
+	}
+	.login-button1:hover, .login-button2:hover, .login-button3:hover,
+		.login-button4:hover {
+		background-color: #545454;
+	}
+	.submast_company_name {
+		color: #000;
+		width: 500px;
+		margin-left: 55px;
+		margin-top: 0;
+		z-index: 45;
+	}
+	.cpanel_logout_link {
+		width: 75px;
+		margin-right: 215px;
+		margin-top: -17px;
+		float: right;
+	}
+	.jumbotron-marvelleWrapper{
+		background-color: #F58A3C;
+		height: 268px;
+		margin-top: 31px;
+	}
+	.jumbotron-marvelle{
+		background-color: #F58A3C;
+		height: 268px;
+		margin-top: 2px;
+	}
+	.marvelle-neon-imageWrapper{
+		margin: -31px auto 0;
+		width: 351px;
+	}
+	.homePage-BriefSummary {
+		width: 500px;
+		margin: 0 auto 0;
+		font-family: Arial sans-serif;
+		font-size: 18px;
+		color: #545454;
+	}
+	.myPhoto{
+		width: 100%;
+	}
+	.homePagePic{
+		width: 140px;
+		height: 145px;
+		margin: 25px auto 30px;
+		border-radius: 100px;
+	}
+	.homePage-BriefSummary,
+	.homePage-MoreAboutMe{
+		width: 900px;
+		margin: 50px auto 0;
+		font-family: Arial sans-serif;
+		font-size: 18px;
+		color: #545454;
+		text-align: center;
+	}
+	.homePage-MoreAboutMe h3{
+		font-family: Arial sans-serif;
+		font-size: 24px;
+		color: #545454;
+	}
+	.moreAbout-Me{
+		width: 200px;
+		height: 50px;
+		margin: 35px auto 25px;
+		border: 1px solid #fff;
+		background-color: #545454;
+		color: #fff;
+		text-align: center;
+	}
+	.moreAbout-Me > span{
+		top: 15px;
+		position: relative;
+		font-weight: bold;
+	}
+	.section-h2{
+		width: 200px;
+		margin: 10px auto 20px;
+		font-family: Arial sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		color: #545454;
+		text-align: center;
+		padding: 10px;
+	}
+	.work-thumbnail {
+		width: 350px;
+		text-align: center;
+	}
+	.portfolio-thumbnail-img{
+		margin: 10px auto 0;
+		border-radius: 7px;
+		border: 1px solid #545454;
+		transition: 0s;
+		width: 200px;
+		height: 195px;
+	}
+	#portfolio-thumbnail-img-1{
+		background: url('../../assets/images/clients/encompass/encompass_logo2.jpeg');
+		background-repeat: no-repeat;
+		background-size: 200px 195px;
+	}
+	#portfolio-thumbnail-img-2{
+		background: url('../../assets/images/clients/cummins/Cummins1.jpg');
+		background-repeat: no-repeat;
+		background-size: 200px 200px;
+	}
+	#portfolio-thumbnail-img-3{
+		background: url('../../assets/images/clients/kingbiggie/KB_Minnesota.png');
+		background-repeat: no-repeat;
+		background-size: 200px 200px;
+	}
+	#portfolio-thumbnail-img-4{
+		background: url('../../assets/images/clients/ecw/boulden_company/logo.jpg');
+		background-repeat: no-repeat;
+		background-size: 200px 200px;
+	}
+	#portfolio-thumbnail-img-5{
+		background: url('../../assets/images/clients/ecw/leecyn/leecyn_logo1.png');
+		background-repeat: no-repeat;
+		background-size: 200px 200px;
+	}
+	#portfolio-thumbnail-img-6{
+		background: url('../../assets/images/clients/ecw/greenville_tool/gtd_logo2.png');
+		background-repeat: no-repeat;
+		background-size: 200px 200px;
+	}
+#portfolio-thumbnail-img-7{
+	background: url('../../assets/images/clients/ecw/condenser_chiller/ccs_tubes_logo1.jpg');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-8{
+	background: url('../../assets/images/clients/ecw/aero_metals/aerometal_logo2.jpg');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-9{
+	background: url('../../assets/images/clients/ecw/qas/qas_logo2.jpg');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-10{
+	background: url('../../assets/images/clients/preputracker/prepUlogo.jpeg');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-11{
+	background: url('../../assets/images/clients/burginconstruction/bc_Logo1.jpg');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-12{
+	background: url('../../assets/images/comingsoon.jpg');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-13{
+	background: url('../../assets/images/clients/homegrownmusiq/hgmLogo2a.jpg');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-14{
+	background: url('../../assets/images/clients/whoslaundry/wl_Logo1_512x512.png');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-15{
+	background: url('../../assets/images/clients/ecw/greenville_tool/gtd_logo2.png');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+#portfolio-thumbnail-img-16{
+	background: url('../../assets/images/clients/ecw/greenville_tool/gtd_logo2.png');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+}
+
+
+	#portfolio-thumbnail-img-1:hover,
+	#portfolio-thumbnail-img-2:hover,
+	#portfolio-thumbnail-img-3:hover,
+	#portfolio-thumbnail-img-4:hover,
+	#portfolio-thumbnail-img-5:hover,
+	#portfolio-thumbnail-img-6:hover{
+		background-size: 205px 195px;
+		transition-delay: 1s;
+		-webkit-transition-duration: 3s;
+		-moz-transition-duration: 3s;
+		/*-ms-transition-duration: 3s;*/
+		-o-transition-duration: 3s;
+		z-index: 100;
+		position: relative;
+	}
+
+	/*---- Start Tier 1 Content Div @ 1920 PX ----*/
+	.main-content-tier1-wrapper {
+		width: 100%;
+		margin: 0 auto 25px;
+		min-height: 400px;
+	}
+	.main-content-tier1-wrapper> p{
+		font-size: 45px;
+		color: orange;
+	}
+	.main-content-tier2-wrapper {
+		width: 75%;
+		margin: 0 auto 0;
+		min-height: 400px;
+	}
+	.skills-thumbnail{
+		padding: 6px;
+    	border: 1px solid #545454;
+   	 	border-radius: 10px;
+    	text-align: center;
+		margin: 0 auto 35px;
+		width: 65%;
+	}
+	.skills-thumbnail:hover{
+		box-shadow: 3px 3px 3px #545454;
+		color: #424242;
+	}
+	#thumbnail-wrapper{
+		height: 250px;
+	}
+	#caption{
+		
+		text-align: center;
+		/* background-color: #545454;
+		display: none;
+		z-index: 500;
+		height: 250px;
+		margin-top: -25px; */
+	}
+	.fa-icon-wrapper{		
+		text-align: center;
+	}
+	.corepage-content-wrapper{
+		margin: 25px 0 0 0;
+	}
+	.corepage-title{
+		width: 100%;
+		color: #000;
+		font-size: 24px;
+		margin: 0 auto 0;
+	}
+	.client-pageWrapper{
+		width: 1100px;
+		margin: 38px auto 0;
+	}	
+	.client-page-imgWrapper{
+		width: 850px;
+		height: 555px;
+		margin: 0 auto 0;
+	}
+	.client-page-img-size{
+		width: 850px;
+		height: 600px;
+	}
+	.homepage-index-top-row,
+	.homepage-index-second-row{
+		width: 70%;
+		margin: 0 auto 0;
+		text-align: center;
+	}
+	.index-top-row,
+	.index-second-row,
+	.index-third-row{
+		width: 100%;
+		margin: 0 auto 0;
+	}
+	.tier3{
+		background-color: #000000;
+	}
+	.contact-form-content{
+		float: right;
+		width: 500px;
+	}
+
+
+/*-- ========================================== Media Query Min Width @ 1700 PX ==================================== */
+/*--  Copyright (c) 2015, Home Grown Designs LLC.  All rights reserved */
+@media ( max-width : 1700px) {
+	/*  Copyright (c) 2015, Home Grown Designs LLC.  All rights reserved */
+	.main-content-wrapper {
+		width: 100%;
+	}
+}
+/*---- end cPanel Form Links @ 1700 PX  ----*/
+
+/*-- ========================================== Media Query Min Width @ 1600 PX ==================================== */
+/*--  Copyright (c) 2014, Home Grown Designs LLC.  All rights reserved */
+@media ( max-width : 1600px) {
+	/*  Copyright (c) 2015, Home Grown Designs LLC.  All rights reserved */
+	.main-content-wrapper {
+		width: 100%;
+		margin: 54px auto 0;
+	}
+	.main-content {
+		width: 64%;
+		margin: 15px auto 100px;
+	}
+	.skills-thumbnail{
+		padding: 6px;
+		margin-bottom: 15px;    	
+	}
+
+} /*---- end cPanel Form Links @ 1600 PX  ----*/
+
+/*-- ========================================== Media Query Min Width @ 1366 PX ==================================== */
+/*--  Copyright (c) 2014, Home Grown Designs LLC.  All rights reserved */
+@media ( max-width : 1366px) {
+	/*  Copyright (c) 2015, Home Grown Designs LLC.  All rights reserved */
+	.main-content-wrapper {
+		width: 100%;
+		margin: 31px auto 15px;
+	}
+	.client-pageWrapper {
+	    width: 1100px;
+	    margin: 40px auto 0;
+	}
+	.skills-thumbnail{
+		padding: 6px;
+	}
+
+} /*---- end cPanel Form Links @ 1366 PX  ----*/
+
+/*-- ========================================== Media Query Min Width @ 768 PX ==================================== */
+/*--  Copyright (c) 2014, Home Grown Designs LLC.  All rights reserved */
+@media ( max-width : 768px) {
+	/*  Copyright (c) 2015, Home Grown Designs LLC.  All rights reserved */
+	.main-content-wrapper {
+		width: 100%;
+		margin: 65px auto 15px;
+	}
+	.main-content {
+		width: 95%;
+		margin: 15px auto 30px;
+	}
+	.contact-form-content {
+		float: none;
+		width: 98%;
+		margin: 25px auto 0;
+	}
+	.homePagePic{
+		width: 156px;
+		height: 161px;		
+		border-radius: 100px;		
+		background-size: 155px 183px;
+		
+	}
+	.homePage-BriefSummary,
+
+	.homePage-MoreAboutMe{
+		width: 85%;
+		font-size: 18px;
+		margin: 0 auto 0;
+	}
+	.skills-thumbnail{
+		padding: 6px;
+	}
+	.work-thumbnail {
+		width: 85%;
+		text-align: center;
+		margin: 0 auto 10px;
+	}
+	.work-thumbnail h3{
+		font-size: 16px;
+		color: #545454;
+	}
+	.index-top-row, .index-second-row, .index-third-row {
+		width: 98%;
+		margin: 0 auto 0;
+		text-align: center;
+	}
+	#portfolio-thumbnail-img {
+		width: 150px;
+		height: 150px;
+	}
+
+} /*---- end cPanel Form Links @ 768 PX  ----*/
+
+@media (max-width: 568px) {
+	.work-thumbnail {
+		width: 73%;
+	}
+	.main-content-wrapper {
+		margin: 80px auto 15px;
+	}
+}
+
+/*-- ========================================== Media Query Min Width @ 360 PX ==================================== */
+/*--  Copyright (c) 2014, Home Grown Designs LLC.  All rights reserved */
+@media ( max-width : 360px) {
+	.homePage-BriefSummary{				
+		font-size: 18px;			
+	}
+
+} /*---- end cPanel Form Links @ 360 PX  ----*/
+
+/*-- ========================================== Media Query Min Width @ 320 PX ==================================== */
+/*--  Copyright (c) 2014, Home Grown Designs LLC.  All rights reserved */
+@media ( max-width : 320px) {
+	.homePage-BriefSummary{				
+		font-size: 18px;			
+	}
+
+} /*---- end cPanel Form Links @ 320 PX  ----*/

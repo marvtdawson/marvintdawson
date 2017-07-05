@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+{% include 'template/layout/pagehead.phtml' %}
+<body>
+   <div class="container-fluid page-content-wrapper">
+       <!-- START HEADER CONTAINER -->
+       <div class="row">
+           <div class="mast-head-wrapper" >
+               {%  include 'template/layout/header.phtml'  %}
+           </div>
+
+       </div>
+       <!-- #end Header wrapper -->
+   </div>
+
+   <!--Start Main Content Wrapper -->
+   <div class="row">
+       {% block maincontent %}
+       {% endblock %}
+   </div>
+
+   <!-- START FOOTER CONTAINER -->
+   <div class="row">
+       <div class="footer-wrapper">
+           {% include 'template/layout/bootstrap_footer.phtml' %}
+       </div>
+   </div><!-- #end Footer wrapper -->
+</body>
+</html>
