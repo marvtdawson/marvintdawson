@@ -175,13 +175,17 @@ body {
 		width: 350px;
 		text-align: center;
 	}
+	.work-thumbnail h3{
+		font-size: 20px;
+		color: #545454;
+	}
 	.portfolio-thumbnail-img{
 		margin: 10px auto 0;
 		border-radius: 7px;
 		border: 1px solid #545454;
 		transition: 0s;
 		width: 200px;
-		height: 195px;
+		min-height: 195px;
 	}
 	#portfolio-thumbnail-img-1{
 		background: url('../../assets/images/clients/encompass/encompass_logo2.jpeg');
@@ -311,8 +315,7 @@ body {
 	#thumbnail-wrapper{
 		height: 250px;
 	}
-	#caption{
-		
+	.caption{
 		text-align: center;
 		/* background-color: #545454;
 		display: none;
@@ -438,7 +441,6 @@ body {
 		
 	}
 	.homePage-BriefSummary,
-
 	.homePage-MoreAboutMe{
 		width: 85%;
 		font-size: 18px;
@@ -447,14 +449,25 @@ body {
 	.skills-thumbnail{
 		padding: 6px;
 	}
+	.skills-thumbnail p{
+		color: #545454;
+		font-size: 16px;
+	}
 	.work-thumbnail {
-		width: 85%;
+		width: 100%;
 		text-align: center;
 		margin: 0 auto 10px;
+		background: none;
+		border: none;
+		color: #fff;
 	}
 	.work-thumbnail h3{
-		font-size: 16px;
-		color: #545454;
+		font-size: 20px;
+		font-weight: bold;
+		color: #FFF;
+	}
+	.work-thumbnail p{
+		visibility: hidden;
 	}
 	.index-top-row, .index-second-row, .index-third-row {
 		width: 98%;
@@ -468,12 +481,52 @@ body {
 
 } /*---- end cPanel Form Links @ 768 PX  ----*/
 
-@media (max-width: 568px) {
-	.work-thumbnail {
-		width: 73%;
+@media(max-width: 736px){
+	.main-content-wrapper{
+		margin: 80px auto 15px;
 	}
+}
+@media (max-width: 568px) {
 	.main-content-wrapper {
 		margin: 80px auto 15px;
+	}
+}
+
+@media(max-width: 414px){
+	.main-content-wrapper {
+		margin: 54px auto 15px;
+	}
+	.homePagePic {
+		margin: 15px auto 30px;
+	}
+	.skills-thumbnail{
+		width: 95%;
+	}
+	.work-thumbnail {
+		margin: 0 auto 65px;
+		height: 275px !important;
+	}
+	.portfolio-thumbnail-img,
+	#portfolio-thumbnail-img-1,
+	#portfolio-thumbnail-img-2,
+	#portfolio-thumbnail-img-3,
+	#portfolio-thumbnail-img-4,
+	#portfolio-thumbnail-img-5,
+	#portfolio-thumbnail-img-6,
+	#portfolio-thumbnail-img-7,
+	#portfolio-thumbnail-img-8,
+	#portfolio-thumbnail-img-9,
+	#portfolio-thumbnail-img-10,
+	#portfolio-thumbnail-img-11,
+	#portfolio-thumbnail-img-12,
+	#portfolio-thumbnail-img-13,
+	#portfolio-thumbnail-img-14,
+	#portfolio-thumbnail-img-15,
+	#portfolio-thumbnail-img-16
+	{
+		width: 275px;
+		min-height: 275px;
+		background-size: 275px 275px;
 	}
 }
 

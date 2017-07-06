@@ -6,6 +6,7 @@
 		width: 100%;
 		height: 55px;
 		background: url('../../assets/images/black_brick_wall_header_background.png') no-repeat;
+		background-size: 100% 55px;
 		position: fixed;
 		margin-top: 0;
         z-index: 150;
@@ -221,9 +222,6 @@
 /* ========================================== Media Query Min Width @ 1366 PX ==================================== */
 
 @media (max-width: 1366px){
-	.mast-head{
-		width: 1050px;
-	}
 	.mast-head-logIn-form-fields-container{
 		width: 470px;
 	}
@@ -406,6 +404,8 @@
 		width: 85%;
         display: block;
 		float: none;
+		margin: auto;
+		padding-left: 0;
     }
     .nav-link-wrapper ul li{
 		width: 40%;
@@ -436,6 +436,7 @@
 	.logo-wrapper{
 		width: 80px;
 		height:65px;
+		margin: 5px 0 0 20px;
 	}
 	.logo{
 		width: 65px;
@@ -448,6 +449,7 @@
 	}
 	.nav-link-wrapper {
 		display: none;
+		margin: 60px auto 0;
 	}
 	/* -- START NAVIGATION -- */
 	.nav-mobile-button{
@@ -475,6 +477,9 @@
 	}
 	.nav-link-wrapper {
 		display: none;
+	}
+	.nav-link-wrapper ul{
+		width: 40%;
 	}
 }
 
@@ -553,7 +558,7 @@
 		margin: 60px auto 0;
 	}
 	.nav-link-wrapper ul {
-		width: 95%;
+		width: 85%;
 	}
 	.nav-mobile-button {
 		background-size: 40px 40px;
@@ -664,8 +669,14 @@
         width: 32px;
         height: 32px;
         background-size: 32px 32px;
-        margin-top: 19px;
+        margin-top: 15px;
         right: 30px;
+	}
+	.nav-link-wrapper{
+		margin: 34px auto 0;
+	}
+	.nav-link-wrapper ul {
+		width: 90%;
 	}
 }
 

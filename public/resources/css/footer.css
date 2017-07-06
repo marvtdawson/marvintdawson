@@ -60,6 +60,7 @@
 	}
 	.footer-hr{
 		visibility: hidden;
+		display: none;
 	}
 	.site-footer{
 		margin: 20px auto 0;
@@ -103,7 +104,7 @@
 		display: none;
 	}
 	.footer-nav{
-		width: 76%;
+		width: 80%;
 	}
 	.footer-nav ul{
 		float: left;
@@ -281,7 +282,7 @@
 	}
 	.footer-nav-subdiv {
 		width: 75%;
-		margin: 0 auto 0;
+		margin: 0 auto 25px;
 		text-align: center;
 	}
 	.footer-nav ul{
@@ -317,6 +318,10 @@
 		height: 10px;
 		display:none;
 	}
+	.footer-wrapper {
+		height: 487px;
+		background-size: 100% 487px;
+	}
 	.footer-nav ul{
 		margin-top: 20px;
 	}
@@ -329,12 +334,25 @@
 	.footer-nav ul li a{
 		font-size: 16px;
 	}
+	.footer-hr {
+		width: 80%;
+		margin: 0 auto 0;
+		visibility: visible;
+		display: block;
+	}
 	.site-footer {
 		font-size: 12px;
+		margin: 30px auto 0;
 	}
 
 }  /* --------------     #end Mast Head Properties @ 736 PX	--------------------------------- */
-
+@media(max-width: 667px){
+	.footer-wrapper {
+		height: 487px;
+		background: url('../../assets/images/black_brick_wall_footer_responsive_background_660.jpg')no-repeat;
+		background-size: 100% 487px;
+	}
+}
 
 /* ========================================== Media Query Min Width @ 640 PX ==================================== */
 /* Copyright (c) 2015, Home Grown Designs LLC.  All rights reserved */
@@ -455,6 +473,10 @@
 	.push_footer_down{
 		height: 10px;
 	}
+	.footer-wrapper {
+		height: 600px;
+		background-size: 100% 600px;
+	}
 	.footer-nav ul{
 		margin-top: 30px;
 	}
@@ -477,6 +499,10 @@
 @media (max-width: 375px){	
 	.push_footer_down{
 		height: 10px;
+	}
+	.footer-wrapper {
+		height: 595px;
+		background-size: 100% 595px;
 	}
 	.footer-nav {
 		width: 100%;

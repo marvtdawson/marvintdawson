@@ -7,5 +7,8 @@
     <div class="nav-mobile-button"></div>
     {% include 'template/layout/header_nav.phtml' %}
 </div><!-- #end mast head -->
-<!-- START Navigation Links -->
-
+<script type="text/javascript">
+    $(".nav-mobile-button").click(function(){
+        $(".nav-link-wrapper").slideToggle("slow");
+    });
+</script>

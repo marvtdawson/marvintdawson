@@ -3,14 +3,14 @@
 @media (max-width: 1920px ) {
 	/* #### START NAVBAR  #### */
 	.header {
-		border-color: none;
+		border: none;
 		position: fixed;
 		transition: height 0.3s linear 0s, padding 0.3s linear 0s;
 		overflow: hidden;
 	}
 
 	.nav-bar-blue {
-		background-color: none;
+		background: none;
 		border: none;
 	}
 
@@ -19,8 +19,8 @@
 	}
 
 	.navbar {
-		background-color: none;
-		border-color: none;
+		background: none;
+		border: none;
 	}
 
 	.navbar-default, .navbar-mtd, .container-fluid {
@@ -29,7 +29,7 @@
 	}
 
 	.navbar-header {
-		background-color: none;
+		background: none;
 	}
 
 	.navbar-brand-logoWrapper {
@@ -101,56 +101,44 @@
 
 	.myphoto-parallax {
 		/* The image used */
-		background-image: url("../../../assets/images/dallas1.jpg");
+		background: url("../../../assets/images/dallas1.jpg") no-repeat fixed center;
 
 		/* Set a specific height */
 		min-height: 250px;
 
 		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	.recent-work-parallax {
 		/* The image used */
-		background-image: url("../../../assets/images/dallas2.JPG");
+		background: url("../../../assets/images/dallas2.JPG") no-repeat fixed center;
 
 		/* Set a specific height */
 		min-height: 450px;
 
 		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	.skills-parallax {
 		/* The image used */
-		background-image: url("../../../assets/images/marvin_the_martian.jpg");
+		background: url("../../../assets/images/marvin_the_martian.jpg") no-repeat fixed center;
 		/* Set a specific height */
 		min-height: 400px;
 
 		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	.about-me-parallax {
 		/* The image used */
-		background-image: url("../../../assets/images/protools.jpg");
+		background: url("../../../assets/images/protools.jpg")no-repeat fixed center;
 
 		/* Set a specific height */
 		min-height: 400px;
 
 		/* Create the parallax scrolling effect */
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
@@ -209,10 +197,6 @@
 	.foot a:visited {
 		color: red;
 	}
-	.work-thumbnail h3{
-		font-size: 20px;
-		color: #545454;
-	}
 }
 
 @media (max-width: 1600px ){
@@ -226,7 +210,11 @@
 @media (max-width: 768px ){
 	.bg-tan{
 		min-height: 290px;
-		top: 110px;
+		position: relative;
+		top: 0;
+	}
+	.aboutMeWrapper img{
+		margin:0 auto 0;
 	}
 	.myphoto-parallax,
 	.recent-work-parallax,
@@ -237,9 +225,7 @@
 }
 @media (max-width: 640px){
 	.bg-tan{
-	 	/* background-color: #e67e22;  */
 		min-height: 245px;
-		top: 110px;
 	}
 	
 }
@@ -248,9 +234,7 @@
 }
 @media (max-width: 375px ){
 	.bg-tan{
-	 	/* background-color: #e67e22;  */
 		min-height: 140px;
-		top: 110px;
 	}
 }
 @media (max-width: 360px ){
@@ -258,7 +242,7 @@
 	 	/* background-color: #e67e22;  */
 		min-height: 132px;
 		top: 110px;
-	}.
+	}
 	.work-thumbnail {
 		 width: 337px;
 	}
