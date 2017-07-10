@@ -188,10 +188,15 @@
 	.push_footer_down{
 		height: 10px;
 	}
+	.footer-wrapper {
+		height: 257px;
+		background-size: 100% 257px;
+	}
+
 	.footer-nav{
 		margin: 0 auto 0;
 		width: 100%;
-		min-height: 80px;
+		min-height: 185px;
 	}
 	.footer-nav ul{
 		float: left;
@@ -207,6 +212,16 @@
 	.footer-nav ul li a{
 		font-size: 13px;
 	}
+	.footer-nav-subdiv {
+		width: 25%;
+		margin-left: 65px;
+	}
+	.site-footer {
+		margin: 30px auto 0;
+		width: 75%;
+		position: relative;
+	}
+
 }  /* --------------     #end Mast Head Properties @ 1024 PX	--------------------------------- */
 
 /* ========================================== Media Query Min Width @ 968 PX ==================================== */

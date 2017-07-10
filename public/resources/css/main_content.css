@@ -416,6 +416,17 @@ body {
 
 } /*---- end cPanel Form Links @ 1366 PX  ----*/
 
+@media(max-width: 1024px){
+	.work-thumbnail{
+		width: 220px;
+		height: 400px;
+	}
+	.skills-thumbnail {
+		width: 100%;
+		min-height: 255px;
+	}
+}
+
 /*-- ========================================== Media Query Min Width @ 768 PX ==================================== */
 /*--  Copyright (c) 2014, Home Grown Designs LLC.  All rights reserved */
 @media ( max-width : 768px) {

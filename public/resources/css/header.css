@@ -14,7 +14,7 @@
 	.mast-head{
 		width: 32%;
 		margin: 0 auto 0;
-		height: 55px;
+		height: 45px;
 
 	}
 	.logo-wrapper{ /* -- Mast Head Logo Container @ 1920 PX -- */
@@ -29,8 +29,6 @@
 		height: 45px;
 		float:left;
 		margin-top: 5px;
-		background: url("../../assets/images/Logo3.jpg");
-        background: no-repeat;
         background-size: 75px 75px;
 	}
 	.logo-image{
@@ -265,14 +263,23 @@
 }
 /* --------------  Media Query Min Width @ 1024PX 	--------------------------------- */
 @media (max-width: 1024px){
+	.mast-head{
+		width: 67%;
+	}
 	.logo-wrapper{
-		margin: 5px 0 0 35px;
-		height: 55px;
-		width: 340px;
+		margin: 0 0 0 70px;
+		height: 45px;
+		width: 80px;
+	}
+	.logo{
+		margin-top: 0;
 	}
 	.nav-link-wrapper{
-		width: 36%;
-		top: 20px;
+		width: 85%;
+		height: 25px;
+		top: 12px;
+		left: 50px;
+		position: relative;
 	}
 	.nav-link-wrapper ul {
 		display: block;
