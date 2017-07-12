@@ -1,14 +1,21 @@
 <?php
-namespace App\Controller;
+/**
+ * Created by PhpStorm.
+ * User: katan-hgmhub
+ * Date: 7/12/17
+ * Time: 6:01 PM
+ */
+
+namespace app\controller;
 
 use core\Controller;
 use core\View;
 use core\Config;
 use library\Models\CorePagesModel;
 use library\Models\SiteKeyWordsModel;
-use appcms\controller\Userprofile;
 
-class About extends Controller
+
+class iMarc extends Controller
 {
     public $get_page_content,
         $core_page_number,
@@ -54,15 +61,15 @@ class About extends Controller
 
     public function indexAction()
     {
-        $this->core_page_number = '1115';
+        $this->core_page_number = '1160';
 
         $this->getPageContent = new CorePagesModel();
         $this->getPageContent->find($this->core_page_number);
         $this->siteContent = $this->getPageContent->data()->corePages_Content;
 
-        View::renderTemplate('about/index.phtml', [
-            'tabTitle' => 'About',
-            'pageTitle' => strtoupper('About'),
+        View::renderTemplate('imarc/index.phtml', [
+            'tabTitle' => 'iMarc Test',
+            'pageTitle' => strtoupper('iMarc'),
             'siteName' => $this->siteName,
             'siteKeywords' => $this->siteKeywords,
             'pageDescription' => 'About Us',
@@ -72,44 +79,4 @@ class About extends Controller
         ]);
     }
 
-    public function educationAction()
-    {
-        $this->core_page_number = '1127';
-
-        $this->getPageContent = new CorePagesModel();
-        $this->getPageContent->find($this->core_page_number);
-        $this->siteContent = $this->getPageContent->data()->corePages_Content;
-
-        View::renderTemplate('about/education.phtml', [
-            'tabTitle' => 'Education',
-            'pageTitle' => strtoupper('Education'),
-            'siteName' => $this->siteName,
-            'siteKeywords' => $this->siteKeywords,
-            'pageDescription' => 'About Us',
-            'username' =>  $this->username,
-            'userLogin' => $this->userLogin,
-            'pageContent' => $this->siteContent,
-        ]);
-
-    }
-
-    public function portfolioAction()
-    {
-        //$this->core_page_number = '1115';
-
-        $this->getPageContent = new CorePagesModel();
-        $this->getPageContent->find($this->core_page_number);
-        //$this->siteContent = $this->getPageContent->data()->corePages_Content;
-
-        View::renderTemplate('about/work.phtml', [
-            'tabTitle' => 'Portfolio',
-            'siteName' => $this->siteName,
-            'siteKeywords' => $this->siteKeywords,
-            'pageDescription' => 'About Us',
-            'username' =>  $this->username,
-            'userLogin' => $this->userLogin,
-            //'pageContent' => $this->siteContent,
-        ]);
-
-    }
 }
