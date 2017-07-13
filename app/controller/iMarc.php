@@ -15,7 +15,7 @@ use library\Models\CorePagesModel;
 use library\Models\SiteKeyWordsModel;
 
 
-class iMarc extends Controller
+class Imarc extends Controller
 {
     public $get_page_content,
         $core_page_number,
@@ -61,7 +61,7 @@ class iMarc extends Controller
 
     public function indexAction()
     {
-        $this->core_page_number = '1160';
+        $this->core_page_number = '1142';
 
         $this->getPageContent = new CorePagesModel();
         $this->getPageContent->find($this->core_page_number);
@@ -72,7 +72,7 @@ class iMarc extends Controller
             'pageTitle' => strtoupper('iMarc'),
             'siteName' => $this->siteName,
             'siteKeywords' => $this->siteKeywords,
-            'pageDescription' => 'About Us',
+            'pageDescription' => 'iMarc',
             'username' =>  $this->username,
             'userLogin' => $this->userLogin,
             'pageContent' => $this->siteContent,
