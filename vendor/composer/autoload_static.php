@@ -1207,7 +1207,7 @@ class ComposerStaticInit6cac1571f22171554891a1c69ef1b37d
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'app\\controller\\Bootstrap' => __DIR__ . '/../..' . '/app/controller/Bootstrap.php',
         'app\\controller\\ConfirmMessages' => __DIR__ . '/../..' . '/app/controller/ConfirmMessages.php',
-        'app\\controller\\Imarc' => __DIR__ . '/../..' . '/app/controller/iMarc.php',
+        'app\\controller\\Imarc' => __DIR__ . '/../..' . '/app/controller/Imarc.php',
         'app\\controller\\Portfolioclients' => __DIR__ . '/../..' . '/app/controller/Portfolioclients.php',
         'app\\controller\\Schema' => __DIR__ . '/../..' . '/app/controller/Schema.php',
         'app\\controller\\Themes' => __DIR__ . '/../..' . '/app/controller/Themes.php',

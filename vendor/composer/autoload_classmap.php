@@ -1038,7 +1038,7 @@ return array(
     'Webmozart\\Assert\\Assert' => $vendorDir . '/webmozart/assert/src/Assert.php',
     'app\\controller\\Bootstrap' => $baseDir . '/app/controller/Bootstrap.php',
     'app\\controller\\ConfirmMessages' => $baseDir . '/app/controller/ConfirmMessages.php',
-    'app\\controller\\Imarc' => $baseDir . '/app/controller/iMarc.php',
+    'app\\controller\\Imarc' => $baseDir . '/app/controller/Imarc.php',
     'app\\controller\\Portfolioclients' => $baseDir . '/app/controller/Portfolioclients.php',
     'app\\controller\\Schema' => $baseDir . '/app/controller/Schema.php',
     'app\\controller\\Themes' => $baseDir . '/app/controller/Themes.php',
