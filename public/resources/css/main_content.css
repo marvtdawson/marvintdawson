@@ -413,6 +413,10 @@ body {
 	.skills-thumbnail{
 		padding: 6px;
 	}
+	#map {
+		height: 400px;
+		width: 100%;
+	}
 
 } /*---- end cPanel Form Links @ 1366 PX  ----*/
 

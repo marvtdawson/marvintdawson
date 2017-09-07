@@ -46,6 +46,23 @@
                 </div>
             </form>
         </div><!-- #end form wrapper -->
-            <div class="contact-form-content">{{ pageContent }} </div>
+            <div class="contact-form-content">{{ pageContent }}
+                <div id="map"></div>
+                <script>
+                function initMap() {
+                  var uluru = {lat: -25.363, lng: 131.044};
+                  var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 4,
+                    center: uluru
+                  });
+                  var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                  });
+                }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw_8gzThsF29EHE0Mw05Zvh8iGSdSACEA&callback=initMap">
+                </script></div>
         </div>
 {% endblock %}
