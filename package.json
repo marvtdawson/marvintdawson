@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "jquery-validation": "^1.17.0"
+    "jquery-validation": "^1.17.0",
+    "update": "^0.7.4"
   },
   "devDependencies": {},
   "scripts": {
