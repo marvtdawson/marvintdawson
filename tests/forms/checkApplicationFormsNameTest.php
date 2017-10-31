@@ -13,31 +13,32 @@ use PHPUnit\Framework\TestCase;
 
 class checkApplicationFormsNameTest extends TestCase {
 
-  public $formIdName = "";
+  //public $formIdName = '';
 
   /**
-   * @test
+   * @test setup
+   * assert that the var is null, before each test
+   *
    */
   public function setUp(){
-
-    $this->assertEmpty($this->formIdName);
-
-    return $this->formIdName;
+   /* $this->assertNotEmpty($this->formIdName);
+    return $this->formIdName;*/
   }
 
   /**
    * @return string
    *
    */
-  public function testFormIdNameNotEmptyTest($formIdName){
+  public function testThatWeCanGetTheFormNameTest(){
 
-      $this->assertNotEmpty($this->formIdName);
-
-    return $this->formIdName;
   }
 
-  protected function tearDown(){
 
+  /**
+   * @test tearDown
+   */
+  public function tearDown(){
+     /* unset($this->formIdName);*/
   }
 
 }

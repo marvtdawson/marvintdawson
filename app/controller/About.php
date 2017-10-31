@@ -112,4 +112,25 @@ class About extends Controller
         ]);
 
     }
+
+    public function customTestsAction(){
+
+      View::renderTemplate('about/customtests.phtml', [
+        'tabTitle' => 'TDD',
+        'siteName' => $this->siteName,
+        'siteKeywords' => $this->siteKeywords,
+        'pageDescription' => 'Custom Tests written by Marvin Dawson ',
+      ]);
+    }
+
+    public function customModulesAction(){
+
+      View::renderTemplate('about/custommodules.phtml', [
+        'tabTitle' => 'Modules',
+        'siteName' => $this->siteName,
+        'siteKeywords' => $this->siteKeywords,
+        'pageDescription' => 'Custom Modules written by Marvin Dawson ',
+      ]);
+
+    }
 }

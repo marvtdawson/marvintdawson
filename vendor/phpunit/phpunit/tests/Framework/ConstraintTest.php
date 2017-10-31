@@ -643,12 +643,9 @@ Failed asserting that two strings are equal.
  'a\\n
 -b\\n
 +p\\n
-
 @@ @@
- i\\n
 -j\\n
 +w\\n
- k'
 
 EOF
             ],
@@ -670,7 +667,6 @@ Failed asserting that two arrays are equal.
  Array (
 -    0 => 0
 +    0 => 1
- )
 
 EOF
             ],
@@ -682,7 +678,6 @@ Failed asserting that two arrays are equal.
  Array (
 -    0 => true
 +    0 => 'true'
- )
 
 EOF
             ],
@@ -696,10 +691,6 @@ Failed asserting that two arrays are equal.
      1 => Array (
 -        0 => 1
 +        0 => 4
-     )
-     2 => Array (...)
-     3 => 3
- )
 
 EOF
             ],
@@ -720,7 +711,6 @@ Failed asserting that two objects are equal.
 @@ @@
  stdClass Object (
 -    'foo' => 'bar'
- )
 
 EOF
             ],
@@ -738,21 +728,12 @@ Failed asserting that two objects are equal.
          1 => Array (
 -            0 => 1
 +            0 => 4
-
 @@ @@
-         'foo' => 'a\\n
 -        b\\n
 +        p\\n
-
 @@ @@
-         i\\n
 -        j\\n
 +        w\\n
-         k'
-     )
-     'self' => stdClass Object (...)
-     'c' => stdClass Object (...)
- )
 
 EOF
             ],
@@ -800,10 +781,6 @@ Failed asserting that two objects are equal.
 -    '$bhash' => Array &1 (
 +SplObjectStorage Object &$storage2hash (
 +    '$bhash' => Array &0 (
-         'obj' => stdClass Object &$bhash ()
-         'inf' => null
-     )
- )
 
 EOF
             ];
@@ -823,10 +800,6 @@ Failed asserting that two objects are equal.
 -    '$bhash' => Array &1 (
 +SplObjectStorage Object &$storage2hash (
 +    '$bhash' => Array &0 (
-         'obj' => stdClass Object &$bhash ()
-         'inf' => null
-     )
- )
 
 EOF
             ];

@@ -48,8 +48,6 @@
             <arg value="--no-progress"/>
             <arg value="--no-ansi"/>
             <arg value="--no-suggest"/>
-            <arg value="--optimize-autoloader"/>
-            <arg value="--prefer-stable"/>
         </exec>
     </target>
 
@@ -315,6 +313,13 @@
                 <include name="**/*.php" />
             </fileset>
         </copy>
+
+        <copy file="${basedir}/vendor/theseer/tokenizer/LICENSE" tofile="${basedir}/build/phar/theseer-tokenizer/LICENSE"/>
+        <copy todir="${basedir}/build/phar/theseer-tokenizer">
+            <fileset dir="${basedir}/vendor/theseer/tokenizer/src">
+                <include name="**/*.php" />
+            </fileset>
+        </copy>
     </target>
 
     <target name="-phar-build" depends="-phar-determine-version">
@@ -344,6 +349,9 @@
             <arg path="${basedir}/build/phar" />
         </exec>
 
+        <copy file="${basedir}/build/binary-phar-autoload.php.in" tofile="${basedir}/build/binary-phar-autoload.php"/>
+        <replace file="${basedir}/build/binary-phar-autoload.php" token="X.Y.Z" value="${_version}"/>
+
         <exec executable="${basedir}/build/tools/phpab" taskname="phpab">
             <arg value="--all" />
             <arg value="--nolower" />
@@ -354,13 +362,14 @@
             <arg value="--output" />
             <arg path="${basedir}/build/phpunit-${_version}.phar" />
             <arg value="--template" />
-            <arg path="${basedir}/build/binary-phar-autoload.php.in" />
+            <arg path="${basedir}/build/binary-phar-autoload.php" />
             <arg path="${basedir}/build/phar" />
         </exec>
 
         <chmod file="${basedir}/build/phpunit-${_version}.phar" perm="ugo+rx"/>
 
         <delete dir="${basedir}/build/phar"/>
+        <delete file="${basedir}/build/binary-phar-autoload.php"/>
     </target>
 
     <target name="-phar-determine-version">

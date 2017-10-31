@@ -27,7 +27,6 @@ use library\Models\SiteKeyWordsModel;
 
 class Contact extends Controller
 {
-
     public $validator,
         $error,
         $formName,

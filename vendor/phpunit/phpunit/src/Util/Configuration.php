@@ -30,6 +30,7 @@ use PHPUnit\TextUI\ResultPrinter;
  *          columns="80"
  *          colors="false"
  *          stderr="false"
+ *          convertDeprecationsToExceptions="true"
  *          convertErrorsToExceptions="true"
  *          convertNoticesToExceptions="true"
  *          convertWarningsToExceptions="true"
@@ -454,14 +455,14 @@ class Configuration
             $name  = (string) $ini->getAttribute('name');
             $value = (string) $ini->getAttribute('value');
 
-            $result['ini'][$name] = $value;
+            $result['ini'][$name]['value'] = $value;
         }
 
         foreach ($this->xpath->query('php/const') as $const) {
             $name  = (string) $const->getAttribute('name');
             $value = (string) $const->getAttribute('value');
 
-            $result['const'][$name] = $this->getBoolean($value, $value);
+            $result['const'][$name]['value'] = $this->getBoolean($value, $value);
         }
 
         foreach (['var', 'env', 'post', 'get', 'cookie', 'server', 'files', 'request'] as $array) {
@@ -469,16 +470,23 @@ class Configuration
                 $name     = (string) $var->getAttribute('name');
                 $value    = (string) $var->getAttribute('value');
                 $verbatim = false;
+                $force    = false;
 
                 if ($var->hasAttribute('verbatim')) {
-                    $verbatim = $this->getBoolean($var->getAttribute('verbatim'), false);
+                    $verbatim                          = $this->getBoolean($var->getAttribute('verbatim'), false);
+                    $result[$array][$name]['verbatim'] = $verbatim;
+                }
+
+                if ($var->hasAttribute('force')) {
+                    $force                          = $this->getBoolean($var->getAttribute('force'), false);
+                    $result[$array][$name]['force'] = $force;
                 }
 
                 if (!$verbatim) {
                     $value = $this->getBoolean($value, $value);
                 }
 
-                $result[$array][$name] = $value;
+                $result[$array][$name]['value'] = $value;
             }
         }
 
@@ -501,15 +509,19 @@ class Configuration
             );
         }
 
-        foreach ($configuration['ini'] as $name => $value) {
+        foreach ($configuration['ini'] as $name => $data) {
+            $value = $data['value'];
+
             if (\defined($value)) {
-                $value = \constant($value);
+                $value = (string) \constant($value);
             }
 
             \ini_set($name, $value);
         }
 
-        foreach ($configuration['const'] as $name => $value) {
+        foreach ($configuration['const'] as $name => $data) {
+            $value = $data['value'];
+
             if (!\defined($name)) {
                 \define($name, $value);
             }
@@ -531,16 +543,24 @@ class Configuration
                     break;
             }
 
-            foreach ($configuration[$array] as $name => $value) {
-                $target[$name] = $value;
+            foreach ($configuration[$array] as $name => $data) {
+                $target[$name] = $data['value'];
             }
         }
 
-        foreach ($configuration['env'] as $name => $value) {
+        foreach ($configuration['env'] as $name => $data) {
+            $value = $data['value'];
+            $force = isset($data['force']) ? $data['force'] : false;
+
             if (false === \getenv($name)) {
                 \putenv("{$name}={$value}");
             }
+
             if (!isset($_ENV[$name])) {
+                $_ENV[$name] = $value;
+            }
+
+            if (true === $force) {
                 $_ENV[$name] = $value;
             }
         }
@@ -610,6 +630,13 @@ class Configuration
         if ($root->getAttribute('bootstrap')) {
             $result['bootstrap'] = $this->toAbsolutePath(
                 (string) $root->getAttribute('bootstrap')
+            );
+        }
+
+        if ($root->hasAttribute('convertDeprecationsToExceptions')) {
+            $result['convertDeprecationsToExceptions'] = $this->getBoolean(
+                (string) $root->getAttribute('convertDeprecationsToExceptions'),
+                true
             );
         }
 
@@ -853,6 +880,8 @@ class Configuration
     /**
      * Returns the test suite configuration.
      *
+     * @param string|null $testSuiteFilter
+     *
      * @return TestSuite
      */
     public function getTestSuiteConfiguration($testSuiteFilter = null)
@@ -867,17 +896,16 @@ class Configuration
             return $this->getTestSuite($testSuiteNodes->item(0), $testSuiteFilter);
         }
 
-        if ($testSuiteNodes->length > 1) {
-            $suite = new TestSuite;
+        //if ($testSuiteNodes->length > 1) { there cannot be a negative number of Nodes
+        $suite = new TestSuite;
 
-            foreach ($testSuiteNodes as $testSuiteNode) {
-                $suite->addTestSuite(
-                    $this->getTestSuite($testSuiteNode, $testSuiteFilter)
-                );
-            }
-
-            return $suite;
+        foreach ($testSuiteNodes as $testSuiteNode) {
+            $suite->addTestSuite(
+                $this->getTestSuite($testSuiteNode, $testSuiteFilter)
+            );
         }
+
+        return $suite;
     }
 
     /**
@@ -897,7 +925,8 @@ class Configuration
     }
 
     /**
-     * @param DOMElement $testSuiteNode
+     * @param DOMElement  $testSuiteNode
+     * @param string|null $testSuiteFilter
      *
      * @return TestSuite
      */
@@ -1016,10 +1045,14 @@ class Configuration
     }
 
     /**
-     * @param string $value
-     * @param bool   $default
+     * if $value is 'false' or 'true', this returns the value that $value represents.
+     * Otherwise, returns $default, which may be a string in rare cases.
+     * See PHPUnit\Util\ConfigurationTest::testPHPConfigurationIsReadCorrectly
      *
-     * @return bool
+     * @param string      $value
+     * @param string|bool $default
+     *
+     * @return string|bool
      */
     protected function getBoolean($value, $default)
     {
@@ -1036,9 +1069,9 @@ class Configuration
 
     /**
      * @param string $value
-     * @param bool   $default
+     * @param int    $default
      *
-     * @return bool
+     * @return int
      */
     protected function getInteger($value, $default)
     {

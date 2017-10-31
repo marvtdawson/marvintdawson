@@ -48,5 +48,8 @@
   "require": {
     "twig/twig": "~1.0",
     "phpunit/phpunit": "^6.1"
+  },
+  "autoload-dev": {
+    "psr-4": { "Tests\\": "tests/" }
   }
 }
