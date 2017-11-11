@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <phpunit bootstrap="./vendor/autoload.php"
+    <phpunit bootstrap="../vendor/autoload.php"
              colors="true"
              verbose="true"
              stopOnFailure="false"
              beStrictAboutTestsThatDoNotTestAnything="true">
         <testsuites name="forms">
             <testsuite>
-                <directory suffix="Test.php">tests/forms/</directory>
-                <file>checkApplicationFormsNameTest.php</file>
+                <directory suffix="Test.php">./tests/forms/</directory>
+                <file>tests/forms/checkApplicationFormsNameTest.php</file>
             </testsuite>
         </testsuites>
         <testsuites name="projects">
             <testsuite>
-                <directory suffix="Test.php">tests/projects/</directory>
+                <directory suffix="Test.php">./tests/projects/</directory>
                 <file>tests/projects/checkPortfolioProjectNameTest.php</file>
             </testsuite>
         </testsuites>

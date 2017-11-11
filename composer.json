@@ -19,7 +19,11 @@
       "library/Models/Proxy",
       "library/Modules",
       "library/View",
-      "library/View/Helper"
+      "library/View/Helper",
+      "tests",
+      "tests/forms",
+      "tests/projects",
+      "tests/unit"
     ],
     "psr-4": {
       "App\\":"app",
@@ -45,11 +49,16 @@
       "Library\\View\\Helper\\":"library/View/Helper"
     }
   },
-  "require": {
+  "require-dev": {
     "twig/twig": "~1.0",
     "phpunit/phpunit": "^6.1"
   },
   "autoload-dev": {
-    "psr-4": { "Tests\\": "tests/" }
+    "psr-4": {
+      "Tests\\": "tests/",
+      "Tests\\Forms\\": "tests/forms/",
+      "Tests\\Projects\\": "tests/projects/",
+      "Tests\\Unit\\": "tests/unit/"
+    }
   }
 }

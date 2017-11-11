@@ -10,6 +10,7 @@
  */
 
 namespace App\Controller;
+
 use core\Config;
 use core\Controller;
 use core\View;
@@ -50,9 +51,9 @@ class Contact extends Controller
         $keyword_type = Config::CORE_PAGES_KEYWORDS;
 
 
-    public function __construct(array $route_params)
+  public function __construct() //array $route_params
     {
-        parent::__construct($route_params);
+        //parent::__construct($route_params);
 
     }
 
@@ -184,4 +185,5 @@ class Contact extends Controller
             }
         }
     }
-}
+
+ }

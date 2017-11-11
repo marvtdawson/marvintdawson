@@ -9,11 +9,14 @@
 namespace tests\forms;
 
 
+
+use App\Controller\About;
+use App\Controller\Contact;
 use PHPUnit\Framework\TestCase;
 
 class checkApplicationFormsNameTest extends TestCase {
 
-  //public $formIdName = '';
+  public $formIdName = '';
 
   /**
    * @test setup
@@ -21,8 +24,8 @@ class checkApplicationFormsNameTest extends TestCase {
    *
    */
   public function setUp(){
-   /* $this->assertNotEmpty($this->formIdName);
-    return $this->formIdName;*/
+   $this->assertEmpty($this->formIdName);
+    return $this->formIdName;
   }
 
   /**
@@ -31,6 +34,13 @@ class checkApplicationFormsNameTest extends TestCase {
    */
   public function testThatWeCanGetTheFormNameTest(){
 
+    $contactObj = new Contact();
+    $viewFormName = $contactObj->indexAction()->View::renderTemplate()->formName;
+    $this->assertNotEmpty($viewFormName);
+
+    //console.log($viewFormName);
+
+    return $viewFormName;
   }
 
 

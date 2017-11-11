@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit6cac1571f22171554891a1c69ef1b37d
 {
+    public static $files = array (
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
@@ -18,6 +22,9 @@ class ComposerStaticInit6cac1571f22171554891a1c69ef1b37d
         'T' => 
         array (
             'Twig\\' => 5,
+            'Tests\\Unit\\' => 11,
+            'Tests\\Projects\\' => 15,
+            'Tests\\Forms\\' => 12,
             'Tests\\' => 6,
         ),
         'L' => 
@@ -71,6 +78,18 @@ class ComposerStaticInit6cac1571f22171554891a1c69ef1b37d
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Tests\\Unit\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests/unit',
+        ),
+        'Tests\\Projects\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests/projects',
+        ),
+        'Tests\\Forms\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests/forms',
         ),
         'Tests\\' => 
         array (
@@ -229,6 +248,7 @@ class ComposerStaticInit6cac1571f22171554891a1c69ef1b37d
         'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
+        'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineCollectionFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineCollectionFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineEmptyCollectionFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineEmptyCollectionFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineProxyFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineProxyFilter.php',
@@ -242,9 +262,11 @@ class ComposerStaticInit6cac1571f22171554891a1c69ef1b37d
         'DeepCopy\\Matcher\\PropertyNameMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Matcher/PropertyNameMatcher.php',
         'DeepCopy\\Matcher\\PropertyTypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Matcher/PropertyTypeMatcher.php',
         'DeepCopy\\Reflection\\ReflectionHelper' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Reflection/ReflectionHelper.php',
+        'DeepCopy\\TypeFilter\\Date\\DateIntervalFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Date/DateIntervalFilter.php',
         'DeepCopy\\TypeFilter\\ReplaceFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/ReplaceFilter.php',
         'DeepCopy\\TypeFilter\\ShallowCopyFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/ShallowCopyFilter.php',
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedList' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedList.php',
+        'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
         'Doctrine\\Instantiator\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/ExceptionInterface.php',
@@ -1543,6 +1565,11 @@ class ComposerStaticInit6cac1571f22171554891a1c69ef1b37d
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'tests\\forms\\checkApplicationFormsNameTest' => __DIR__ . '/../..' . '/tests/forms/checkApplicationFormsNameTest.php',
+        'tests\\projects\\checkPortfolioProjectNameTest' => __DIR__ . '/../..' . '/tests/projects/checkPortfolioProjectNameTest.php',
+        'tests\\unit\\FormNameTest' => __DIR__ . '/../..' . '/tests/unit/FormNameTest.php',
+        'tests\\unit\\SampleTest' => __DIR__ . '/../..' . '/tests/unit/SampleTest.php',
+        'tests\\unit\\UserTest' => __DIR__ . '/../..' . '/tests/unit/UserTest.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
