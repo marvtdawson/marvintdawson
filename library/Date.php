@@ -45,9 +45,9 @@ class Date
                                   $this->fullmonth,
                                   $this->fullday,
                                   $this->fullyear);
-
-        // return the
-        return $this->datevalues;
     }
+
+  // return the
+    // return $this->datevalues;
 
 }
