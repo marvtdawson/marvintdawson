@@ -16,4 +16,9 @@
                 <file>tests/projects/checkPortfolioProjectNameTest.php</file>
             </testsuite>
         </testsuites>
+        <filter>
+            <whitelist processUncoveredFilesFromWhiteList="true">
+                <directory suffix=".php">./test</directory>
+            </whitelist>
+        </filter>
     </phpunit>

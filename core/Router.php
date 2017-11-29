@@ -129,10 +129,11 @@ class Router
                 $action = $this->convertToCamelCase($action);
 
                 // if action is callable or not private
+              if(preg_match('/action$/i', $action) == 0) {
                 if (is_callable([$controller_object, $action])) {
-                    $controller_object->$action();
-
-                } else {
+                  $controller_object->$action();
+                }
+              }else {
                     echo "Method $action (in controller $controller) not found";
                 }
             } else {

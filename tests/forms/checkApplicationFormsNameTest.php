@@ -23,7 +23,7 @@ class checkApplicationFormsNameTest extends TestCase {
    * assert that the var is null, before each test
    *
    */
-  public function setUp(){
+  protected function setUp(){
    $this->assertEmpty($this->formIdName);
     return $this->formIdName;
   }
@@ -47,7 +47,7 @@ class checkApplicationFormsNameTest extends TestCase {
   /**
    * @test tearDown
    */
-  public function tearDown(){
+  protected function tearDown(){
      /* unset($this->formIdName);*/
   }
 
